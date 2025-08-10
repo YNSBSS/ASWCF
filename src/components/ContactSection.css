@@ -1,0 +1,1410 @@
+/* Enhanced Contact Section CSS with Degrees of White and Advanced Effects */
+
+/* CSS Variables for Contact Enhancement */
+:root {
+  /* Extended White Spectrum */
+  --contact-white-zenith: #ffffff;
+  --contact-white-celestial: #fefefe;
+  --contact-white-divine: #fdfdfd;
+  --contact-white-ethereal: #fcfcfc;
+  --contact-white-luminous: #fbfbfb;
+  --contact-white-radiant: #fafafa;
+  --contact-white-brilliant: #f9f9f9;
+  --contact-white-pristine: #f8f8f8;
+  --contact-white-pure: #f7f7f7;
+  --contact-white-immaculate: #f6f6f6;
+  --contact-white-crystal: #f5f5f5;
+  --contact-white-diamond: #f4f4f4;
+  --contact-white-pearl: #f3f3f3;
+  --contact-white-opal: #f2f2f2;
+  --contact-white-moonstone: #f1f1f1;
+  --contact-white-quartz: #f0f0f0;
+  --contact-white-marble: #efefef;
+  --contact-white-alabaster: #eeeeee;
+  --contact-white-ivory: #ededed;
+  --contact-white-bone: #ececec;
+  --contact-white-ash: #ebebeb;
+  --contact-white-mist: #eaeaea;
+  --contact-white-fog: #e9e9e9;
+  --contact-white-haze: #e8e8e8;
+  --contact-white-vapor: #e7e7e7;
+  
+  /* Mystical Glass Effects */
+  --contact-glass-transcendent: rgba(255, 255, 255, 0.99);
+  --contact-glass-sublime: rgba(255, 255, 255, 0.96);
+  --contact-glass-ethereal: rgba(255, 255, 255, 0.93);
+  --contact-glass-mystical: rgba(255, 255, 255, 0.90);
+  --contact-glass-magical: rgba(255, 255, 255, 0.87);
+  --contact-glass-enchanted: rgba(255, 255, 255, 0.84);
+  --contact-glass-celestial: rgba(255, 255, 255, 0.81);
+  --contact-glass-divine: rgba(255, 255, 255, 0.78);
+  --contact-glass-radiant: rgba(255, 255, 255, 0.75);
+  --contact-glass-luminous: rgba(255, 255, 255, 0.72);
+  
+  /* Advanced Shadow Taxonomy */
+  --contact-shadow-breath: 0 1px 2px rgba(0, 0, 0, 0.01), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --contact-shadow-whisper: 0 2px 4px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.03);
+  --contact-shadow-murmur: 0 3px 6px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --contact-shadow-gentle: 0 4px 8px rgba(0, 0, 0, 0.04), 0 3px 10px rgba(0, 0, 0, 0.05);
+  --contact-shadow-soft: 0 6px 12px rgba(0, 0, 0, 0.05), 0 4px 14px rgba(0, 0, 0, 0.06);
+  --contact-shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.06), 0 5px 18px rgba(0, 0, 0, 0.07);
+  --contact-shadow-strong: 0 10px 20px rgba(0, 0, 0, 0.07), 0 6px 22px rgba(0, 0, 0, 0.08);
+  --contact-shadow-bold: 0 12px 24px rgba(0, 0, 0, 0.08), 0 7px 26px rgba(0, 0, 0, 0.09);
+  --contact-shadow-dramatic: 0 16px 32px rgba(0, 0, 0, 0.09), 0 8px 30px rgba(0, 0, 0, 0.10);
+  --contact-shadow-epic: 0 20px 40px rgba(0, 0, 0, 0.10), 0 10px 35px rgba(0, 0, 0, 0.11);
+  --contact-shadow-legendary: 0 24px 48px rgba(0, 0, 0, 0.12), 0 12px 40px rgba(0, 0, 0, 0.13);
+  --contact-shadow-mythical: 0 32px 64px rgba(0, 0, 0, 0.14), 0 16px 50px rgba(0, 0, 0, 0.15);
+  --contact-shadow-cosmic: 0 40px 80px rgba(0, 0, 0, 0.16), 0 20px 60px rgba(0, 0, 0, 0.17);
+  --contact-shadow-universal: 0 50px 100px rgba(0, 0, 0, 0.18), 0 25px 75px rgba(0, 0, 0, 0.19);
+  
+  /* Inner Shadow Depths */
+  --contact-shadow-inner-feather: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+  --contact-shadow-inner-soft: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+  --contact-shadow-inner-medium: inset 0 3px 6px rgba(0, 0, 0, 0.04);
+  --contact-shadow-inner-deep: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+  --contact-shadow-inner-profound: inset 0 6px 12px rgba(0, 0, 0, 0.06);
+  --contact-shadow-inner-abyss: inset 0 8px 16px rgba(0, 0, 0, 0.08);
+  
+  /* Luminous Glow Spectrum */
+  --contact-glow-spark: 0 0 6px rgba(255, 255, 255, 0.8);
+  --contact-glow-shimmer: 0 0 12px rgba(255, 255, 255, 0.7);
+  --contact-glow-radiance: 0 0 18px rgba(255, 255, 255, 0.6);
+  --contact-glow-brilliance: 0 0 24px rgba(255, 255, 255, 0.5);
+  --contact-glow-luminance: 0 0 32px rgba(255, 255, 255, 0.4);
+  --contact-glow-incandescence: 0 0 40px rgba(255, 255, 255, 0.35);
+  --contact-glow-effulgence: 0 0 50px rgba(255, 255, 255, 0.3);
+  --contact-glow-refulgence: 0 0 60px rgba(255, 255, 255, 0.25);
+  --contact-glow-resplendence: 0 0 80px rgba(255, 255, 255, 0.2);
+  --contact-glow-transcendence: 0 0 100px rgba(255, 255, 255, 0.15);
+  
+  /* Ethereal Text Shadows */
+  --contact-text-shadow-whisper: 1px 1px 3px rgba(255, 255, 255, 0.9), -1px -1px 3px rgba(0, 0, 0, 0.04);
+  --contact-text-shadow-soft: 2px 2px 6px rgba(255, 255, 255, 0.95), -2px -2px 6px rgba(0, 0, 0, 0.06);
+  --contact-text-shadow-ethereal: 3px 3px 10px rgba(255, 255, 255, 0.98), -3px -3px 10px rgba(0, 0, 0, 0.08);
+  --contact-text-shadow-divine: 4px 4px 15px rgba(255, 255, 255, 0.99), -4px -4px 15px rgba(0, 0, 0, 0.10);
+  
+  /* Fluid Transitions */
+  --contact-transition-swift: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --contact-transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  --contact-transition-elegant: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  --contact-transition-mystical: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --contact-transition-transcendent: all 1.2s cubic-bezier(0.13, 1, 0.25, 1);
+}
+
+/* Main Contact Sanctuary */
+.contact-sanctuary-realm {
+  position: relative;
+  padding: 8rem 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    var(--contact-white-zenith) 0%,
+    var(--contact-white-celestial) 4%,
+    var(--contact-white-divine) 8%,
+    var(--contact-white-ethereal) 12%,
+    var(--contact-white-luminous) 16%,
+    var(--contact-white-radiant) 20%,
+    var(--contact-white-brilliant) 24%,
+    var(--contact-white-pristine) 28%,
+    var(--contact-white-pure) 32%,
+    var(--contact-white-immaculate) 36%,
+    var(--contact-white-crystal) 40%,
+    var(--contact-white-diamond) 44%,
+    var(--contact-white-pearl) 48%,
+    var(--contact-white-opal) 52%,
+    var(--contact-white-moonstone) 56%,
+    var(--contact-white-quartz) 60%,
+    var(--contact-white-marble) 64%,
+    var(--contact-white-alabaster) 68%,
+    var(--contact-white-ivory) 72%,
+    var(--contact-white-bone) 76%,
+    var(--contact-white-ash) 80%,
+    var(--contact-white-mist) 84%,
+    var(--contact-white-fog) 88%,
+    var(--contact-white-haze) 92%,
+    var(--contact-white-vapor) 96%,
+    var(--contact-white-zenith) 100%);
+  background-size: 1000% 1000%;
+  animation: contactSanctuaryBreath 35s ease-in-out infinite;
+  overflow: hidden;
+}
+
+@keyframes contactSanctuaryBreath {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  12.5% {
+    background-position: 100% 25%;
+  }
+  25% {
+    background-position: 75% 75%;
+  }
+  37.5% {
+    background-position: 25% 100%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  62.5% {
+    background-position: 100% 75%;
+  }
+  75% {
+    background-position: 25% 25%;
+  }
+  87.5% {
+    background-position: 75% 0%;
+  }
+}
+
+/* Mystical Background Overlay */
+.contact-sanctuary-realm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 18% 22%, var(--contact-glass-luminous) 0%, transparent 28%),
+    radial-gradient(circle at 82% 28%, var(--contact-glass-radiant) 0%, transparent 22%),
+    radial-gradient(circle at 25% 75%, var(--contact-glass-divine) 0%, transparent 32%),
+    radial-gradient(circle at 75% 78%, var(--contact-glass-celestial) 0%, transparent 20%),
+    radial-gradient(circle at 45% 45%, var(--contact-glass-enchanted) 0%, transparent 38%),
+    radial-gradient(circle at 12% 65%, var(--contact-glass-magical) 0%, transparent 25%),
+    radial-gradient(circle at 88% 15%, var(--contact-glass-mystical) 0%, transparent 30%),
+    radial-gradient(circle at 55% 85%, var(--contact-glass-ethereal) 0%, transparent 26%),
+    radial-gradient(circle at 35% 12%, var(--contact-glass-sublime) 0%, transparent 35%);
+  animation: contactPatternHarmony 45s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes contactPatternHarmony {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  11% {
+    transform: translate(12px, -18px) rotate(40deg) scale(1.1);
+    opacity: 0.8;
+  }
+  22% {
+    transform: translate(-15px, 22px) rotate(80deg) scale(0.9);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translate(20px, -12px) rotate(120deg) scale(1.15);
+    opacity: 0.9;
+  }
+  44% {
+    transform: translate(-18px, 25px) rotate(160deg) scale(0.85);
+    opacity: 0.7;
+  }
+  55% {
+    transform: translate(25px, -20px) rotate(200deg) scale(1.2);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translate(-22px, 18px) rotate(240deg) scale(0.95);
+    opacity: 0.85;
+  }
+  77% {
+    transform: translate(18px, -25px) rotate(280deg) scale(1.05);
+    opacity: 0.75;
+  }
+  88% {
+    transform: translate(-25px, 15px) rotate(320deg) scale(1.25);
+    opacity: 0.6;
+  }
+}
+
+/* Cosmic Container */
+.contact-cosmic-container {
+  position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+/* Stellar Grid Layout */
+.contact-stellar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .contact-stellar-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+  }
+}
+
+/* Information Nebula */
+.contact-info-nebula {
+  position: relative;
+  padding: 4rem;
+  background: var(--contact-glass-transcendent);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border-radius: 48px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-resplendence),
+    var(--contact-shadow-inner-profound);
+  transition: var(--contact-transition-transcendent);
+  overflow: hidden;
+}
+
+.contact-info-nebula::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, 
+    var(--contact-white-zenith),
+    var(--contact-white-celestial),
+    var(--contact-white-divine),
+    var(--contact-white-ethereal),
+    var(--contact-white-luminous),
+    var(--contact-white-radiant),
+    var(--contact-white-brilliant),
+    var(--contact-white-pristine),
+    var(--contact-white-zenith));
+  background-size: 700% 700%;
+  border-radius: 52px;
+  z-index: -1;
+  animation: contactNebulaAura 18s ease-in-out infinite;
+}
+
+@keyframes contactNebulaAura {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.3;
+  }
+  25% {
+    background-position: 100% 25%;
+    opacity: 0.7;
+  }
+  50% {
+    background-position: 75% 75%;
+    opacity: 0.5;
+  }
+  75% {
+    background-position: 25% 100%;
+    opacity: 0.9;
+  }
+}
+
+.contact-info-nebula:hover {
+  transform: translateY(-15px) scale(1.02) rotate(0.3deg);
+  box-shadow: 
+    var(--contact-shadow-universal),
+    var(--contact-glow-transcendence),
+    0 0 140px rgba(255, 255, 255, 0.4);
+}
+
+/* Header Constellation */
+.contact-header-constellation {
+  margin-bottom: 3rem;
+  position: relative;
+  text-align: center;
+}
+
+.contact-title-supernova {
+  position: relative;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.contact-title-core {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  color: #1f2937;
+  background: linear-gradient(135deg, 
+    #111827 0%, 
+    #1f2937 20%, 
+    #374151 40%, 
+    #4b5563 60%, 
+    #6b7280 80%, 
+    #111827 100%);
+  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: var(--contact-text-shadow-divine);
+  animation: contactTitleNova 16s ease-in-out infinite;
+  transition: var(--contact-transition-elegant);
+  letter-spacing: -0.03em;
+  display: block;
+}
+
+@keyframes contactTitleNova {
+  0%, 100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  25% {
+    background-position: 100% 25%;
+    transform: scale(1.05);
+  }
+  50% {
+    background-position: 75% 75%;
+    transform: scale(0.98);
+  }
+  75% {
+    background-position: 25% 100%;
+    transform: scale(1.03);
+  }
+}
+
+.contact-title-corona {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  right: -25px;
+  bottom: -25px;
+  border: 4px solid var(--contact-glass-magical);
+  border-radius: 50%;
+  box-shadow: 
+    var(--contact-shadow-epic),
+    var(--contact-glow-brilliance);
+  animation: contactCoronaRotation 30s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes contactCoronaRotation {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+  25% { transform: rotate(90deg) scale(1.1); opacity: 0.8; }
+  50% { transform: rotate(180deg) scale(0.9); opacity: 0.3; }
+  75% { transform: rotate(270deg) scale(1.15); opacity: 0.9; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
+}
+
+.contact-description-aurora {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  line-height: 1.8;
+  color: #4b5563;
+  max-width: 42rem;
+  margin: 0 auto;
+  text-shadow: var(--contact-text-shadow-ethereal);
+  transition: var(--contact-transition-smooth);
+}
+
+.contact-info-nebula:hover .contact-description-aurora {
+  color: #374151;
+  transform: translateY(-3px) scale(1.01);
+}
+
+.contact-header-stardust {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--contact-white-pearl), 
+    var(--contact-white-opal), 
+    var(--contact-white-moonstone), 
+    var(--contact-white-quartz),
+    var(--contact-white-marble),
+    var(--contact-white-alabaster),
+    transparent);
+  border-radius: 8px;
+  transform: translateX(-50%);
+  box-shadow: var(--contact-glow-shimmer);
+  animation: contactStardustExpansion 10s ease-in-out infinite;
+}
+
+@keyframes contactStardustExpansion {
+  0%, 100% {
+    width: 0;
+    opacity: 0.3;
+  }
+  50% {
+    width: 80%;
+    opacity: 0.9;
+  }
+}
+
+/* Contact Cards Galaxy */
+.contact-cards-galaxy {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info-crystal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--contact-glass-sublime);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border-radius: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    var(--contact-shadow-legendary),
+    var(--contact-glow-luminance),
+    var(--contact-shadow-inner-medium);
+  transition: var(--contact-transition-elegant);
+  overflow: hidden;
+  animation: contactCrystalFloat 6s ease-in-out infinite;
+}
+
+@keyframes contactCrystalFloat {
+  0%, 100% { 
+    opacity: 0.9; 
+    transform: translateY(0);
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-5px);
+  }
+}
+
+.contact-info-crystal:hover {
+  transform: translateY(-12px) scale(1.03) rotate(0.5deg);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-effulgence),
+    0 0 100px rgba(255, 255, 255, 0.35);
+}
+
+.contact-icon-sphere {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background: var(--contact-glass-ethereal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    var(--contact-shadow-epic),
+    var(--contact-glow-radiance),
+    var(--contact-shadow-inner-deep);
+  transition: var(--contact-transition-smooth);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+}
+
+.contact-icon-sphere::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, 
+    var(--contact-white-zenith),
+    var(--contact-white-divine),
+    var(--contact-white-luminous),
+    var(--contact-white-brilliant));
+  background-size: 300% 300%;
+  border-radius: 50%;
+  z-index: -1;
+  animation: contactIconSphereGlow 12s ease-in-out infinite;
+}
+
+@keyframes contactIconSphereGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.4;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.8;
+  }
+}
+
+.contact-icon-star {
+  color: #374151;
+  transition: var(--contact-transition-swift);
+  z-index: 10;
+  position: relative;
+  animation: contactIconStarPulse 4s ease-in-out infinite;
+}
+
+@keyframes contactIconStarPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(180deg); }
+}
+
+.contact-info-crystal:hover .contact-icon-star {
+  color: #1f2937;
+  transform: scale(1.2) rotate(360deg);
+}
+
+.contact-icon-halo {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid var(--contact-glass-divine);
+  border-radius: 50%;
+  animation: contactIconHaloSpin 20s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes contactIconHaloSpin {
+  0% { transform: rotate(0deg); opacity: 0.6; }
+  50% { transform: rotate(180deg); opacity: 0.9; }
+  100% { transform: rotate(360deg); opacity: 0.6; }
+}
+
+.contact-details-prism {
+  flex: 1;
+  transition: var(--contact-transition-smooth);
+}
+
+.contact-label-whisper {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: var(--contact-text-shadow-whisper);
+  transition: var(--contact-transition-swift);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-value-radiance {
+  font-size: 1.125rem;
+  color: #1f2937;
+  font-weight: 700;
+  text-shadow: var(--contact-text-shadow-soft);
+  transition: var(--contact-transition-swift);
+}
+
+.contact-info-crystal:hover .contact-label-whisper {
+  color: #4b5563;
+  transform: translateY(-1px);
+}
+
+.contact-info-crystal:hover .contact-value-radiance {
+  color: #111827;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.contact-card-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.5), 
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5),
+    transparent);
+  transition: var(--contact-transition-elegant);
+  z-index: 1;
+}
+
+.contact-info-crystal:hover .contact-card-shimmer {
+  left: 100%;
+}
+
+.contact-card-pulse {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent,
+    var(--contact-white-pearl),
+    var(--contact-white-opal),
+    var(--contact-white-moonstone),
+    transparent);
+  border-radius: 4px;
+  box-shadow: var(--contact-glow-spark);
+  animation: contactCardPulseFlow 8s ease-in-out infinite;
+}
+
+@keyframes contactCardPulseFlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleX(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleX(1.2);
+  }
+}
+
+/* Info Sparkles */
+.contact-info-sparkles {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-sparkle {
+  color: #9ca3af;
+  opacity: 0.6;
+  animation: contactSparkleWink 3s ease-in-out infinite;
+}
+
+.contact-sparkle-one {
+  animation-delay: 0s;
+}
+
+.contact-sparkle-two {
+  animation-delay: 1s;
+}
+
+.contact-sparkle-three {
+  animation-delay: 2s;
+}
+
+@keyframes contactSparkleWink {
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: scale(1) rotate(0deg);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.3) rotate(180deg);
+  }
+}
+
+/* Form Dimension */
+.contact-form-dimension {
+  position: relative;
+}
+
+.contact-form-vessel {
+  position: relative;
+  padding: 3.5rem;
+  background: var(--contact-glass-sublime);
+  backdrop-filter: blur(35px) saturate(220%);
+  -webkit-backdrop-filter: blur(35px) saturate(220%);
+  border-radius: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-refulgence),
+    var(--contact-shadow-inner-abyss);
+  transition: var(--contact-transition-mystical);
+  overflow: hidden;
+}
+
+.contact-form-vessel::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, 
+    var(--contact-white-zenith),
+    var(--contact-white-divine),
+    var(--contact-white-luminous),
+    var(--contact-white-brilliant),
+    var(--contact-white-crystal),
+    var(--contact-white-pearl),
+    var(--contact-white-marble),
+    var(--contact-white-zenith));
+  background-size: 600% 600%;
+  border-radius: 44px;
+  z-index: -1;
+  animation: contactFormVesselGlow 22s ease-in-out infinite;
+}
+
+@keyframes contactFormVesselGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.4;
+  }
+  33% {
+    background-position: 100% 25%;
+    opacity: 0.8;
+  }
+  66% {
+    background-position: 50% 100%;
+    opacity: 0.6;
+  }
+}
+
+.contact-form-vessel:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 
+    var(--contact-shadow-universal),
+    var(--contact-glow-transcendence),
+    0 0 120px rgba(255, 255, 255, 0.4);
+}
+
+/* Form Title */
+.contact-form-title-nova {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 3rem;
+  text-shadow: var(--contact-text-shadow-ethereal);
+  position: relative;
+  text-align: center;
+}
+
+.contact-form-title-trail {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #1f2937, 
+    #374151, 
+    #4b5563, 
+    #1f2937, 
+    transparent);
+  border-radius: 8px;
+  transform: translateX(-50%);
+  transition: var(--contact-transition-elegant);
+}
+
+.contact-form-vessel:hover .contact-form-title-trail {
+  width: 60%;
+}
+
+/* Form Cosmos */
+.contact-form-cosmos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Field Constellation */
+.contact-field-constellation {
+  position: relative;
+  transition: var(--contact-transition-smooth);
+}
+
+.contact-input-crystal,
+.contact-textarea-crystal {
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--contact-glass-ethereal);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  color: #1f2937;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-shadow: var(--contact-text-shadow-whisper);
+  box-shadow: 
+    var(--contact-shadow-dramatic),
+    var(--contact-glow-radiance),
+    var(--contact-shadow-inner-medium);
+  transition: var(--contact-transition-smooth);
+  outline: none;
+  resize: none;
+}
+
+.contact-input-crystal::placeholder,
+.contact-textarea-crystal::placeholder {
+  color: #6b7280;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.contact-input-focused {
+  transform: translateY(-4px) scale(1.01);
+  background: var(--contact-glass-transcendent);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-effulgence),
+    0 0 80px rgba(255, 255, 255, 0.3);
+}
+
+.contact-field-aurora {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4),
+    transparent);
+  transition: var(--contact-transition-elegant);
+  border-radius: 24px;
+  opacity: 0;
+}
+
+.contact-input-focused + .contact-field-aurora {
+  left: 100%;
+  opacity: 1;
+}
+
+.contact-field-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #1f2937, 
+    #374151, 
+    #1f2937, 
+    transparent);
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: var(--contact-transition-smooth);
+  box-shadow: var(--contact-glow-spark);
+}
+
+.contact-input-focused + .contact-field-aurora + .contact-field-glow,
+.contact-field-constellation:hover .contact-field-glow {
+  width: 100%;
+}
+
+/* Submit Universe */
+.contact-submit-universe {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.contact-submit-comet {
+  position: relative;
+  width: 100%;
+  padding: 1.75rem 2rem;
+  background: var(--contact-glass-transcendent);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 28px;
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-shadow: var(--contact-text-shadow-ethereal);
+  box-shadow: 
+    var(--contact-shadow-legendary),
+    var(--contact-glow-incandescence),
+    var(--contact-shadow-inner-profound);
+  transition: var(--contact-transition-elegant);
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-submit-comet::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(135deg, 
+    var(--contact-white-zenith),
+    var(--contact-white-celestial),
+    var(--contact-white-divine),
+    var(--contact-white-ethereal),
+    var(--contact-white-luminous),
+    var(--contact-white-radiant),
+    var(--contact-white-zenith));
+  background-size: 400% 400%;
+  border-radius: 31px;
+  z-index: -1;
+  animation: contactSubmitCometGlow 14s ease-in-out infinite;
+}
+
+@keyframes contactSubmitCometGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.5;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.9;
+  }
+}
+
+.contact-submit-core {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+  transition: var(--contact-transition-swift);
+}
+
+.contact-submit-icon {
+  transition: var(--contact-transition-swift);
+  animation: contactSubmitIconFloat 3s ease-in-out infinite;
+}
+
+@keyframes contactSubmitIconFloat {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(5px) rotate(15deg); }
+}
+
+.contact-submit-comet:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: var(--contact-white-zenith);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-transcendence),
+    0 0 100px rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-submit-comet:hover .contact-submit-core {
+  transform: scale(1.05);
+}
+
+.contact-submit-comet:hover .contact-submit-icon {
+  transform: translateX(8px) rotate(360deg) scale(1.2);
+}
+
+.contact-submit-trail {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.6), 
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6),
+    transparent);
+  transition: var(--contact-transition-mystical);
+  border-radius: 28px;
+}
+
+.contact-submit-comet:hover .contact-submit-trail {
+  left: 100%;
+}
+
+.contact-submit-explosion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, 
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(255, 255, 255, 0.4) 30%, 
+    transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--contact-transition-swift);
+  opacity: 0;
+}
+
+.contact-submit-comet:active .contact-submit-explosion {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+/* Form Background Constellation */
+.contact-form-constellation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-form-star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--contact-glass-divine);
+  border-radius: 50%;
+  box-shadow: var(--contact-glow-spark);
+  animation: contactFormStarTwinkle 4s ease-in-out infinite;
+}
+
+.contact-form-star-one {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.contact-form-star-two {
+  top: 70%;
+  right: 15%;
+  animation-delay: 1.5s;
+}
+
+.contact-form-star-three {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 3s;
+}
+
+@keyframes contactFormStarTwinkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.5);
+  }
+}
+
+/* Floating Luminous Particles */
+.contact-luminous-particle {
+  position: absolute;
+  background: var(--contact-glass-radiant);
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    var(--contact-shadow-epic),
+    var(--contact-glow-luminance);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.contact-particle-alpha {
+  width: 180px;
+  height: 180px;
+  top: 5%;
+  left: 2%;
+  animation: contactParticleAlphaFlow 32s ease-in-out infinite;
+}
+
+.contact-particle-beta {
+  width: 140px;
+  height: 140px;
+  top: 40%;
+  right: 3%;
+  animation: contactParticleBetaFlow 28s ease-in-out infinite;
+}
+
+.contact-particle-gamma {
+  width: 110px;
+  height: 110px;
+  bottom: 30%;
+  left: 5%;
+  animation: contactParticleGammaFlow 26s ease-in-out infinite;
+}
+
+.contact-particle-delta {
+  width: 160px;
+  height: 160px;
+  top: 25%;
+  right: 12%;
+  animation: contactParticleDeltaFlow 34s ease-in-out infinite;
+}
+
+.contact-particle-epsilon {
+  width: 90px;
+  height: 90px;
+  bottom: 10%;
+  right: 8%;
+  animation: contactParticleEpsilonFlow 24s ease-in-out infinite;
+}
+
+.contact-particle-zeta {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  left: 15%;
+  animation: contactParticleZetaFlow 30s ease-in-out infinite;
+}
+
+@keyframes contactParticleAlphaFlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.3; }
+  16% { transform: translate(40px, -30px) rotate(60deg) scale(1.2); opacity: 0.7; }
+  33% { transform: translate(-25px, -45px) rotate(120deg) scale(0.8); opacity: 0.5; }
+  50% { transform: translate(-40px, -20px) rotate(180deg) scale(1.1); opacity: 0.9; }
+  66% { transform: translate(30px, 25px) rotate(240deg) scale(0.9); opacity: 0.4; }
+  83% { transform: translate(25px, -35px) rotate(300deg) scale(1.15); opacity: 0.8; }
+}
+
+@keyframes contactParticleBetaFlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.4; }
+  25% { transform: translate(-35px, 30px) rotate(90deg) scale(1.1); opacity: 0.8; }
+  50% { transform: translate(30px, 35px) rotate(180deg) scale(0.85); opacity: 0.2; }
+  75% { transform: translate(35px, -30px) rotate(270deg) scale(1.25); opacity: 0.9; }
+}
+
+@keyframes contactParticleGammaFlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.5; }
+  33% { transform: translate(35px, -20px) rotate(120deg) scale(0.7); opacity: 0.3; }
+  66% { transform: translate(-20px, 35px) rotate(240deg) scale(1.3); opacity: 0.8; }
+}
+
+@keyframes contactParticleDeltaFlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.2; }
+  20% { transform: translate(-30px, 20px) rotate(72deg) scale(1.05); opacity: 0.6; }
+  40% { transform: translate(20px, 30px) rotate(144deg) scale(0.85); opacity: 0.4; }
+  60% { transform: translate(30px, -20px) rotate(216deg) scale(1.15); opacity: 0.8; }
+  80% { transform: translate(-20px, -30px) rotate(288deg) scale(0.95); opacity: 0.3; }
+}
+
+@keyframes contactParticleEpsilonFlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.6; }
+  50% { transform: translate(-35px, -40px) rotate(180deg) scale(1.4); opacity: 0.2; }
+}
+
+@keyframes contactParticleZetaFlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.4; }
+  25% { transform: translate(25px, -25px) rotate(90deg) scale(0.9); opacity: 0.7; }
+  50% { transform: translate(-25px, 25px) rotate(180deg) scale(1.2); opacity: 0.3; }
+  75% { transform: translate(-25px, -25px) rotate(270deg) scale(1.05); opacity: 0.8; }
+}
+
+/* Active States and Interactions */
+.contact-input-crystal:focus,
+.contact-textarea-crystal:focus {
+  transform: translateY(-4px) scale(1.01);
+  background: var(--contact-glass-transcendent);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-effulgence),
+    0 0 80px rgba(255, 255, 255, 0.3);
+}
+
+.contact-input-crystal:hover,
+.contact-textarea-crystal:hover {
+  transform: translateY(-2px);
+  background: var(--contact-glass-sublime);
+  box-shadow: 
+    var(--contact-shadow-mythical),
+    var(--contact-glow-brilliance);
+}
+
+/* Submit Button Active States */
+.contact-submit-comet:active {
+  transform: translateY(-4px) scale(0.98);
+  box-shadow: 
+    var(--contact-shadow-dramatic),
+    var(--contact-glow-luminance);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-sanctuary-realm {
+    padding: 4rem 0;
+  }
+  
+  .contact-cosmic-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-stellar-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-info-nebula,
+  .contact-form-vessel {
+    padding: 2.5rem;
+  }
+  
+  .contact-title-core {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form-title-nova {
+    font-size: 2rem;
+  }
+  
+  .contact-cards-galaxy {
+    gap: 1.5rem;
+  }
+  
+  .contact-info-crystal {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .contact-icon-sphere {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Hide some particles on mobile */
+  .contact-particle-delta,
+  .contact-particle-epsilon,
+  .contact-particle-zeta {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info-nebula,
+  .contact-form-vessel {
+    padding: 2rem;
+  }
+  
+  .contact-title-core {
+    font-size: 2rem;
+  }
+  
+  .contact-form-title-nova {
+    font-size: 1.75rem;
+  }
+  
+  .contact-input-crystal,
+  .contact-textarea-crystal {
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+  
+  .contact-submit-comet {
+    padding: 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .contact-description-aurora {
+    font-size: 1rem;
+  }
+}
+
+/* Performance and Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .contact-sanctuary-realm {
+    background: var(--contact-white-zenith);
+  }
+  
+  .contact-title-core,
+  .contact-form-title-nova {
+    color: #000000;
+  }
+  
+  .contact-input-crystal,
+  .contact-textarea-crystal,
+  .contact-submit-comet {
+    border-color: #000000;
+    color: #000000;
+  }
+  
+  .contact-label-whisper,
+  .contact-value-radiance {
+    color: #000000;
+  }
+}
+
+/* Focus States for Accessibility */
+.contact-input-crystal:focus-visible,
+.contact-textarea-crystal:focus-visible,
+.contact-submit-comet:focus-visible {
+  outline: 3px solid #374151;
+  outline-offset: 4px;
+}
+
+/* Enhanced Hover Effects */
+.contact-info-crystal:hover .contact-icon-sphere {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 
+    var(--contact-shadow-cosmic),
+    var(--contact-glow-incandescence);
+}
+
+.contact-info-crystal:hover .contact-icon-halo {
+  transform: scale(1.3);
+  opacity: 1;
+  border-width: 3px;
+}
+
+/* Loading State Animation */
+.contact-submit-comet.loading {
+  pointer-events: none;
+  background: var(--contact-glass-ethereal);
+}
+
+.contact-submit-comet.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border: 3px solid transparent;
+  border-top: 3px solid #374151;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: contactSubmitLoading 1s linear infinite;
+}
+
+@keyframes contactSubmitLoading {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Advanced Micro-interactions */
+.contact-field-constellation:hover {
+  transform: translateY(-2px);
+}
+
+.contact-field-constellation:hover .contact-input-crystal,
+.contact-field-constellation:hover .contact-textarea-crystal {
+  background: var(--contact-glass-sublime);
+  box-shadow: 
+    var(--contact-shadow-mythical),
+    var(--contact-glow-brilliance);
+}
+
+/* Pulse Effects */
+.contact-info-sparkles:hover .contact-sparkle {
+  animation-duration: 1s;
+  color: #6b7280;
+}
+
+.contact-header-constellation:hover .contact-title-corona {
+  animation-duration: 15s;
+  opacity: 0.8;
+  border-width: 6px;
+}
+
+/* Success Animation */
+.contact-submit-comet.success {
+  background: linear-gradient(135deg, 
+    #10b981, 
+    #059669, 
+    #047857);
+  color: white;
+  transform: scale(1.05);
+  animation: contactSubmitSuccess 0.6s ease-out;
+}
+
+@keyframes contactSubmitSuccess {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.05); }
+}
